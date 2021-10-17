@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MalubayMLab02">
         <activity
+            android:name=".orderForm"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

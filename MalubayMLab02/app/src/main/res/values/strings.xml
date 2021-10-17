@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MalubayMLab02</string>
+
+    <string name="btnOrderHere">Order Here</string>
+    <string name="txtWelcome">Welcome to</string>
+    <string name="txtAddy">Adelynne Malubay\'s Cafe</string>
+
 </resources>
