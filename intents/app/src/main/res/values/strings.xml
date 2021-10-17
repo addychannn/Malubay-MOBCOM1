@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">IntentsProject</string>
+    <string name="btnWeb">Browser</string>
+    <string name="btnDialer">Call</string>
+    <string name="btnEmail">Email</string>
+    <string name="btnCamera">Camera</string>
+    <string name="btnNext">Next</string>
+    <string name="btnToast">A Toast</string>
+
+    <string name="txtSubj">Subject</string>
+    <string name="txtMsg">Message</string>
+    <string name="lblEmail">Email</string>
+    <string name="txtEmail">Email</string>
+    <string name="btnBack">Back</string>
+    <string name="btnMail">Send</string>
+</resources>
