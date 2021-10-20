@@ -7,7 +7,7 @@
     tools:context=".orderForm">
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editAddress"
         android:layout_width="347dp"
         android:layout_height="43dp"
         android:layout_marginStart="16dp"
@@ -15,7 +15,7 @@
         android:ems="10"
         android:fontFamily="sans-serif-condensed-medium"
         android:inputType="textPersonName"
-        android:text="Address"
+        android:text="@string/editAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.343"
@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="0.404" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/editName"
         android:layout_width="351dp"
         android:layout_height="41dp"
         android:layout_marginStart="16dp"
@@ -32,7 +32,7 @@
         android:ems="10"
         android:fontFamily="sans-serif-condensed-medium"
         android:inputType="textPersonName"
-        android:text="Last name, First name"
+        android:text="@string/editName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.383"
@@ -41,7 +41,41 @@
         app:layout_constraintVertical_bias="0.13" />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/editFood"
+        android:layout_width="351dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:inputType="textPersonName"
+        android:text="@string/editFood"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.621" />
+
+    <EditText
+        android:id="@+id/editBeverage"
+        android:layout_width="351dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:inputType="textPersonName"
+        android:text="@string/editBeverage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.749" />
+
+    <EditText
+        android:id="@+id/editMobilePhone"
         android:layout_width="348dp"
         android:layout_height="44dp"
         android:layout_marginStart="16dp"
@@ -49,7 +83,7 @@
         android:ems="10"
         android:fontFamily="sans-serif-condensed-medium"
         android:inputType="phone"
-        android:text="Mobile Phone"
+        android:text="@string/editMobilePhone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.354"
@@ -58,7 +92,7 @@
         app:layout_constraintVertical_bias="0.225" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/editEmail"
         android:layout_width="349dp"
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
@@ -66,7 +100,7 @@
         android:ems="10"
         android:fontFamily="sans-serif-condensed-medium"
         android:inputType="textEmailAddress"
-        android:text="Email"
+        android:text="@string/editEmail"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.366"
@@ -75,13 +109,60 @@
         app:layout_constraintVertical_bias="0.313" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtOrder"
         android:layout_width="79dp"
         android:layout_height="40dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:text="Orders:"
+        android:text="@string/txtOrder"
+        android:textColor="#000000"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="329dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <TextView
+        android:id="@+id/txtFood"
+        android:layout_width="79dp"
+        android:layout_height="40dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/txtFood"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.562" />
+
+    <TextView
+        android:id="@+id/txtBeverage"
+        android:layout_width="95dp"
+        android:layout_height="38dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/txtBeverage"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.691" />
+
+    <Button
+        android:id="@+id/btnsubmitOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnsubmitOrder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.929" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
