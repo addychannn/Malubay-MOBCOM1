@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/home/Documents/Malubay-MOBCOM1/MalubayMLab02/app/src/main/res/layout/activity_confirm_order.xml" value="0.25" />
         <entry key="..\:/Users/home/Documents/Malubay-MOBCOM1/MalubayMLab02/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/home/Documents/Malubay-MOBCOM1/MalubayMLab02/app/src/main/res/layout/activity_order_form.xml" value="0.25" />
+        <entry key="..\:/Users/home/Documents/Malubay-MOBCOM1/MalubayMLab02/app/src/main/res/layout/activity_submit.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

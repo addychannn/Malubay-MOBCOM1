@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MalubayMLab02">
         <activity
+            android:name=".confirmOrder"
+            android:exported="true" />
+        <activity
             android:name=".submit"
             android:exported="true" />
         <activity

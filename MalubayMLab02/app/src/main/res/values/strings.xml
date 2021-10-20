@@ -1,14 +1,17 @@
 <resources>
     <string name="app_name">MalubayMLab02</string>
+
     //buttons
     <string name="btnOrderHere">Order Here</string>
     <string name="btnsubmitOrder">Submit Order</string>
     //texts
     <string name="txtWelcome">Welcome to</string>
-    <string name="txtAddy">Adelynne Malubay\'s Cafe</string>
+    <string name="txtAddy">Addy\'s Cafe</string>
     <string name="txtOrder">Orders:</string>
     <string name="txtFood">Food:</string>
     <string name="txtBeverage">Beverage:</string>
+    <string name="subject">Your Orders From Addy\'s Cafe</string>
+    <string name="orderMessage"></string>
     //inputs
     <string name="editAddress">Address</string>
     <string name="editName">Last Name, First Name</string>
