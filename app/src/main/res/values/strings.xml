@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">MalubayMLab01-test</string>
+    <string name="app_name">MalubayMLab01</string>
+    <string name="title">Create Event</string>
+    <string name="eventDesc">Event Description</string>
+    <string name="eventName">Event Name</string>
+    <string name="eventPlace">Event Place</string>
+    <string name="eventDate">Event Date</string>
+    <string name="startingTime">Starting Time</string>
+    <string name="endTime">End Time</string>
+    <string name="addGuests">Add Guests</string>
+    <string name="btnCreate">Create</string>
+    <string name="btnBack">Back</string>
+    <string name="eventTime">Time</string>
+    <string name="evDate">Date</string>
+
+    <string name="mainCreate">Create Event</string>
+
 </resources>

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MalubayMLab01test">
         <activity
+            android:name=".createEvent"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
