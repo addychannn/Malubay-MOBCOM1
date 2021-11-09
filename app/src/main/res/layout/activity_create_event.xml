@@ -34,7 +34,7 @@
         app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.485" />
+        app:layout_constraintVertical_bias="0.564" />
 
     <EditText
         android:id="@+id/eventName"
@@ -69,12 +69,12 @@
         app:layout_constraintVertical_bias="0.166" />
 
     <EditText
-        android:id="@+id/eventDate"
+        android:id="@+id/startDate"
         android:layout_width="382dp"
         android:layout_height="45dp"
         android:ems="10"
         android:fontFamily="sans-serif-condensed-light"
-        android:hint="@string/eventDate"
+        android:hint="@string/startDate"
         android:inputType="date"
         android:textColor="#000000"
         android:textColorHint="#000000"
@@ -85,6 +85,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.245" />
+
+
+    <EditText
+        android:id="@+id/endDate"
+        android:layout_width="382dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed-light"
+        android:hint="@string/endDate"
+        android:inputType="date"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.326" />
 
     <EditText
         android:id="@+id/startingTime"
@@ -102,7 +121,7 @@
         app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.326" />
+        app:layout_constraintVertical_bias="0.405" />
 
     <EditText
         android:id="@+id/endTime"
@@ -120,7 +139,7 @@
         app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.405" />
+        app:layout_constraintVertical_bias="0.485" />
 
     <EditText
         android:id="@+id/addGuests"
@@ -137,8 +156,7 @@
         app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.564" />
-
+        app:layout_constraintVertical_bias="0.643" />
 
     <Button
         android:id="@+id/btnCreate"
@@ -164,34 +182,39 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.949" />
 
+
+    <DatePicker
+        android:id="@+id/evDate"
+        android:layout_width="409dp"
+        android:layout_height="338dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="16dp"
+        android:background="#FFFFFF"
+        android:datePickerMode="calendar"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.181"
+        tools:ignore="NotSibling" />
+
     <TimePicker
-        android:id="@+id/eventTime"
+        android:id="@+id/eventTpcker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="16dp"
         android:layout_marginTop="108dp"
         android:layout_marginEnd="16dp"
+        android:background="#FFFFFF"
         android:timePickerMode="clock"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eventTime"
-        tools:ignore="NotSibling" />
-
-    <DatePicker
-        android:id="@+id/evDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="16dp"
-        android:datePickerMode="calendar"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/evDate"
-        tools:ignore="NotSibling" />
+        app:layout_constraintTop_toBottomOf="@+id/etTime"
+        tools:ignore="NotSibling,UnknownId" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

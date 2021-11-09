@@ -1,5 +1,6 @@
 package com.example.malubaymlab01_test
 
+import android.annotation.SuppressLint
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +16,12 @@ class createEvent : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_event)
 
+        val btnCreate = findViewById<Button>(R.id.btnCreate)
+
+        btnCreate.setOnClickListener(this)
+
+        btnCreate.visibility = ViewGroup.VISIBLE
+
         val nAct = findViewById<Button>(R.id.btnBack)
         val context = nAct.context
         val back = Intent(context, MainActivity::class.java)
@@ -22,6 +29,22 @@ class createEvent : AppCompatActivity(), View.OnClickListener {
         nAct?.setOnClickListener {
             context.startActivity(back)
         }
+        val startingTime =
+            findViewById<EditText>(R.id.startingTime)
+        startingTime?.setOnClickListener {
+            onStartingTimeClick()
+        }
+        val endTime =
+            findViewById<EditText>(R.id.endTime)
+        endTime?.setOnClickListener {
+            onEndTimeClick()
+        }
+        val date =
+            findViewById<EditText>(R.id.startDate)
+        date?.setOnClickListener {
+            onDateClick()
+        }
+
     }
 
     override fun onClick(view: View?) {
@@ -29,12 +52,12 @@ class createEvent : AppCompatActivity(), View.OnClickListener {
         val place = findViewById<EditText>(R.id.eventPlace)
         val description = findViewById<EditText>(R.id.eventDesc)
         val guests = findViewById<EditText>(R.id.addGuests)
-        var startingTime =
-            findViewById<EditText>(R.id.startingTime) //this need to be converted into timeInMills
+        val startingTime =
+            findViewById<EditText>(R.id.startingTime)
         val endTime =
-            findViewById<EditText>(R.id.endTime)   //this need to be converted into timeInMills
+            findViewById<EditText>(R.id.endTime)
 
-        //temporary constant begin time
+
         val begin: Long = Calendar.getInstance().run {
             set(2021, 11, 5, 17, 30)
             timeInMillis
@@ -78,7 +101,7 @@ class createEvent : AppCompatActivity(), View.OnClickListener {
         description: String,
         recipients: String
     ) {
-        val intent = Intent(Intent.ACTION_INSERT).apply {//Used for creating a new Calendar event
+        val intent = Intent(Intent.ACTION_INSERT).apply {//creating a new Calendar event
             data = CalendarContract.Events.CONTENT_URI
             putExtra(CalendarContract.Events.TITLE, title)
             putExtra(CalendarContract.Events.EVENT_LOCATION, location)
@@ -96,17 +119,17 @@ class createEvent : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    private fun onTimeClick() {
-        val textView = this.findViewById<TextView>(R.id.eventTime)
-        val timePicker = findViewById<TimePicker>(R.id.eventTime)
+    private fun onStartingTimeClick() {
+        val textView = findViewById<TextView>(R.id.startingTime)
+        val timePicker = findViewById<TimePicker>(R.id.eventTpcker)
         val datePicker = findViewById<DatePicker>(R.id.evDate)
-        timePicker.visibility = ViewGroup.VISIBLE //shows or opens timePicker
+        timePicker.visibility = ViewGroup.VISIBLE // opens timePicker
         datePicker.visibility =
-            ViewGroup.INVISIBLE //hides datePicker (or create a function to toggle visibility)
+            ViewGroup.INVISIBLE //hides datePicker
         timePicker.setOnTimeChangedListener { _, hour, minute ->
             var hr = hour
             val ampm: String
-            // determines if input time is AM or PM
+
             when {
                 hour == 0 -> {
                     hr += 12
@@ -123,10 +146,57 @@ class createEvent : AppCompatActivity(), View.OnClickListener {
                 val finhour = if (hour < 10) "0$hour" else hour
                 val min = if (minute < 10) "0$minute" else minute
                 // display format of time
-                val msg = "Time is: $finhour : $min $ampm"
+                val msg = "Starting Time is: $finhour : $min $ampm"
                 textView.text = msg
                 textView.visibility = ViewGroup.VISIBLE
             }
         }
+
+    }
+
+    private fun onEndTimeClick() {
+        val textView = findViewById<TextView>(R.id.endTime)
+        val timePicker = findViewById<TimePicker>(R.id.eventTpcker)
+        val datePicker = findViewById<DatePicker>(R.id.evDate)
+        timePicker.visibility = ViewGroup.VISIBLE // opens timePicker
+        datePicker.visibility =
+            ViewGroup.INVISIBLE //hides datePicker
+        timePicker.setOnTimeChangedListener { _, hour, minute ->
+            var hr = hour
+            val ampm: String
+
+            when {
+                hour == 0 -> {
+                    hr += 12
+                    ampm = "AM"
+                }
+                hour == 12 -> ampm = "PM"
+                hour > 12 -> {
+                    hr -= 12
+                    ampm = "PM"
+                }
+                else -> ampm = "AM"
+            }
+            if (textView != null) {
+                val finhour = if (hour < 10) "0$hour" else hour
+                val min = if (minute < 10) "0$minute" else minute
+                // display format of time
+                val msg = "Ending Time is: $finhour : $min $ampm"
+                textView.text = msg
+                textView.visibility = ViewGroup.VISIBLE
+            }
+        }
+
+    }
+
+//    @SuppressLint("WrongViewCast")
+
+    private fun onDateClick() {
+        val textView = findViewById<EditText>(R.id.startDate)
+        val timePicker = findViewById<TimePicker>(R.id.eventTpcker)
+        val datePicker = findViewById<DatePicker>(R.id.evDate)
+        timePicker.visibility = ViewGroup.INVISIBLE // opens timePicker
+        datePicker.visibility = ViewGroup.VISIBLE //hides datePicker
     }
 }
+

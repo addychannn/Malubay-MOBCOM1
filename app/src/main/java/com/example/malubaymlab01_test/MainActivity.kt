@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         nAct?.setOnClickListener{
             context.startActivity(goTocreateEvent)
         }
+
     }
     }
 

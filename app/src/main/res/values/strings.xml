@@ -4,7 +4,8 @@
     <string name="eventDesc">Event Description</string>
     <string name="eventName">Event Name</string>
     <string name="eventPlace">Event Place</string>
-    <string name="eventDate">Event Date</string>
+    <string name="startDate">Start Date</string>
+    <string name="endDate">End Date</string>
     <string name="startingTime">Starting Time</string>
     <string name="endTime">End Time</string>
     <string name="addGuests">Add Guests</string>
