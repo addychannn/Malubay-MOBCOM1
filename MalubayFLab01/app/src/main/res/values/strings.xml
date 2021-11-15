@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MalubayFlab01</string>
+    <string name="btnProfile">Profile</string>
+    <string name="profile">Profile</string>
+    <string name="fname">First name</string>
+    <string name="lname">Last name</string>
+    <string name="address">Address</string>
+    <string name="email">E-mail</string>
+    <string name="mobileNumber">Mobile number</string>
+    <string name="btnSave">Save</string>
+    <string name="btnCancel">Cancel</string>
+</resources>
