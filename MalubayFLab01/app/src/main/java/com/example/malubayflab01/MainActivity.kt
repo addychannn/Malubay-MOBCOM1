@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val goToProfile=findViewById<Button>(R.id.nextBtn)
+        val goToProfile=findViewById<Button>(R.id.btnProfile)
         val context=goToProfile.context
         val iProfile= Intent(context,profile::class.java)
 
